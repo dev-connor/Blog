@@ -1,0 +1,27 @@
+.sidebar-element
+  #counter(class='overflow-hidden flex justify-between')
+    div
+      div(class='text-left')
+        .title 전체
+        .count [##_count_total_##]
+    div(class='flex gap-x-2 text-right')
+      div
+        .title 오늘
+        .count [##_count_today_##]
+      div
+        .title 어제
+        .count [##_count_yesterday_##]
+
+style
+  :postcss
+    #sidebar {
+      #counter {
+        .title {
+          @apply text-h-400 text-xs;
+        }
+
+        .count {
+          @apply text-h-600 dark:text-h-200;
+        }
+      }
+    }
