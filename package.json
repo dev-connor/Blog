@@ -11,7 +11,8 @@
     "production": "cross-env NODE_ENV=production tidory production",
     "deploy": "tidory deploy",
     "store": "tidory store",
-    "lint": "eslint --ext .js --ignore-path .gitignore . && pug-lint ."
+    "lint": "eslint --ext .js --ignore-path .gitignore . && pug-lint .",
+    "dist": "tidory production && push-dir --dir=dist --branch=tistory-skin --cleanup && tidory deploy"
   },
   "license": "MIT",
   "repository": {
@@ -28,7 +29,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "pug-lint": "^2.6.0"
+    "pug-lint": "^2.6.0",
+    "push-dir": "^0.4.1"
   },
   "dependencies": {
     "@alpinejs/collapse": "^3.11.1",
